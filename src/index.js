@@ -11,13 +11,17 @@ const person = {
   name: "Abdulhalim",
   age: 22,
   address: "123 Main Street",
-  education: () => {
-      console.log("Degree of English");
-      console.log("Degree of Mathematics");
+  education () {
+    const edu_background = this;
+    console.log(edu_background);
+    // console.log("Degree of Mathematics");
   },
 };
 
-console.log(person);
-//change person name to "Mohamed"
-person.name = "Mohamed";
-console.log(person.education());
+// console.log(person);
+// //change person name to "Mohamed"
+// person.name = "Mohamed";
+// console.log(person.education());
+
+const education = person.education.bind(person);
+education();
